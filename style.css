@@ -1,0 +1,174 @@
+/* <------- BOX MODEL -------> */
+
+.box-model {
+  height: 100vh;
+  background-color: aqua;
+}
+
+.box-model .box-1 {
+  background-color: indigo;
+
+  /* FIRST STEP: THE BOX THAT CONTAINS THE ACTUAL CONTENT (INTERNAL)*/
+  width: 250px;
+  height: 250px;
+
+  /* SECOND STEP: THE DISTANCE BETWEEN THE CONTENT AND THE BORDER (INTERNAL)*/
+  padding: 20px 30px 10px 40px;
+
+  /* THIRD STEP: A BORDER THAT GOES AROUND THE PADDING AND THE CONTENT (INTERNAL) */
+  border: 30px solid blue;
+
+  /* FOURTH STEP: THE SPACE OUTSIDE THE BORDER USED TO SEPARATE 2 ELEMENTS  (EXTERNAL, COLLAPSING)*/
+  margin: 50px;
+
+  /* box-sizing: border-box; */
+}
+
+.box-model .box-2 {
+  background-color: red;
+
+  /* FIRST STEP: THE BOX THAT CONTAINS THE ACTUAL CONTENT */
+  width: 250px;
+  height: 250px;
+
+  /* SECOND STEP: THE DISTANCE BETWEEN THE CONTENT AND THE BORDER */
+  padding: 20px 30px;
+
+  /* THIRD STEP: A BORDER THAT GOES AROUND THE PADDING AND THE CONTENT (INTERNAL) */
+  border-left: 20px dashed yellow;
+
+  /* FOURTH STEP: THE SPACE OUTSIDE THE BORDER USED TO SEPARATE 2 ELEMENTS  (EXTERNAL, COLLAPSING)*/
+  margin-top: 40px;
+
+  /* box-sizing: border-box; */
+}
+
+/* <------- POSITIONING -------> 
+The types of positioning in CSS are:
+1)static: this is the default value.We cannot use top,bottom,left and right and
+z-index value with static position.
+
+2)relative: the element is positioned relative to its normal position.We can 
+move relative element using top,bottom,left and right.
+
+3)absolute: the element is positioned absolutely to its first positioned parent.
+We can moved element and provide z-index. For example we position parent relative
+and move child using absolute property.
+
+4)fixed: the element is positioned related to the browser window.
+
+5)sticky: the element is positioned based on the user's scroll position.After
+element goes to scroll position it act as fixed and we give it using top,left,
+right,bottom.  (RELATIVE TO ITS PARENT)
+*/
+
+.positioning {
+  height: 100vh;
+  background-color: violet;
+  /* position: relative;
+  overflow: visible; */
+}
+
+.positioning .box-1 {
+  background-color: darkslategray;
+  width: fit-content;
+  /* position: relative;
+  bottom: 0%;
+  left: 0%; */
+}
+
+.positioning .box-2 {
+  background-color: darkolivegreen;
+  width: fit-content;
+  /* position: fixed;
+  top: 0; */
+}
+
+/* <------- LAYOUT -------> */
+.flexbox,
+.grid {
+  height: 100vh;
+  background-color: cadetblue;
+}
+
+.flex-wrapper .box-1,
+.grid-wrapper .box-1 {
+  background-color: lightcoral;
+}
+.flex-wrapper .box-2,
+.grid-wrapper .box-2 {
+  background-color: lightgreen;
+}
+.flex-wrapper .box-3,
+.grid-wrapper .box-3 {
+  background-color: lightskyblue;
+}
+.flex-wrapper .box-4,
+.grid-wrapper .box-4 {
+  background-color: lightseagreen;
+}
+.flex-wrapper .box-5,
+.grid-wrapper .box-5 {
+  background-color: lightpink;
+}
+
+.flex-wrapper {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  border: 5px solid green;
+  /* QUESTION: WHY AM I USING BORDER-BOX HERE? */
+  box-sizing: border-box;
+}
+
+.flex-wrapper .box {
+  height: 100px;
+  width: 200px;
+  /* flex-basis: 200px; */
+  /* flex-grow: 1; */
+}
+
+.flex-wrapper .box-1 {
+  /* flex-grow: 1; */
+}
+
+.flex-wrapper .box-2 {
+  /* flex-grow: 3; */
+}
+
+.flex-wrapper .box-3 {
+  /* flex-shrink: 2; */
+}
+
+.flex-wrapper .box-4 {
+}
+
+.flex-wrapper .box-5 {
+}
+
+.grid-wrapper {
+  width: 100%;
+  height: 90%;
+  border: 5px solid yellow;
+  box-sizing: border-box;
+}
+
+.grid-wrapper .box {
+  height: 100px;
+  width: 200px;
+}
+
+.grid-wrapper .box-1 {
+}
+
+.grid-wrapper .box-2 {
+}
+
+.grid-wrapper .box-3 {
+}
+
+.grid-wrapper .box-4 {
+}
+
+.grid-wrapper .box-5 {
+}
