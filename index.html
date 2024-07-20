@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML 5 Boilerplate</title>
+    <title>STP 2024 CSS</title>
+    <!-- WHY IS BS5 ADDED HERE? -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
@@ -24,18 +31,21 @@
     </style>
   </head>
   <body>
+    <!-- https://www.w3schools.com/css/css_boxmodel.asp -->
     <article class="box-model lesson">
       <h1>BOX MODEL</h1>
       <div class="box-1"></div>
       <p class="box-2"></p>
     </article>
 
+    <!-- https://www.w3schools.com/css/css_positioning.asp -->
     <article class="positioning lesson">
       <h1>POSITIONING</h1>
       <div class="box-1">POSITION-1</div>
       <p class="box-2">POSITION-2</p>
     </article>
 
+    <!-- https://www.w3schools.com/css/css3_flexbox.asp -->
     <article class="flexbox lesson">
       <h1>LAYOUT</h1>
       <h3>FLEXBOX:</h3>
@@ -47,7 +57,9 @@
         <div class="box-5 box">5</div>
       </div>
     </article>
-    <div class="grid lesson">
+
+    <!-- https://www.w3schools.com/css/css_grid.asp -->
+    <article class="grid lesson">
       <h3>GRID:</h3>
       <div class="grid-wrapper">
         <div class="box-1 box">1</div>
@@ -56,6 +68,220 @@
         <div class="box-4 box">4</div>
         <div class="box-5 box">5</div>
       </div>
-    </div>
+    </article>
+
+    <!-- https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <article class="bootstrap lesson">
+      <h1 class="">What is BS5?</h1>
+      <div class="">
+        <p class="">
+          Bootstrap 5, the latest iteration of the renowned front-end framework,
+          empowers developers to construct responsive and visually appealing
+          websites with ease. Its robust toolkit offers a wealth of pre-designed
+          components, ranging from alerts and buttons to navigation bars and
+          modals, accelerating the development process and ensuring consistent
+          design. addition to these ready-made elements, Bootstrap 5 boasts a
+          comprehensive collection of utility classes. These small, reusable CSS
+          classes allow granular styling of HTML elements, simplifying
+          modifications to appearance and layout without requiring custom CSS.
+          From managing spacing and colors to controlling display and flexbox,
+          these utility classes offer flexibility and control for fine-tuning
+          your design. The combination of Bootstrap 5's components and utility
+          classes streamlines development, promotes a consistent look and feel,
+          and ensures your website adapts gracefully to various screen sizes.
+          This powerful framework provides a solid foundation while allowing for
+          ample customization, ultimately saving you time and effort in creating
+          modern, visually appealing websites.
+        </p>
+        <button class="">contact us</button>
+        <img class="w-50" src="./assets/bootstrap.jpg" alt="BS5 Image" />
+      </div>
+
+      <!-- BS5 COMPONENT: https://getbootstrap.com/docs/5.0/components/accordion/ -->
+    </article>
+
+    <article class="responsive lesson">
+      <h1 class="text-center">RESPONSIVE</h1>
+      <!-- https://www.w3schools.com/css/css_rwd_mediaqueries.asp -->
+      <h3 class="ms-2">MEDIA QUERIES</h3>
+      <div class="bg-primary p-2 d-flex justify-content-center">
+        <img src="./assets/bootstrap.jpg" alt="example image" class="image" />
+      </div>
+    </article>
+
+    <article class="responsive lesson">
+      <!-- https://getbootstrap.com/docs/5.0/layout/grid/ -->
+      <h3 class="ms-2">BS5 GRID SYSTEM:</h3>
+      <div class="row mx-5">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+
+      <h3>LET'S RECREATE THE SECTION ABOVE USING BS5 GRID SYSTEM:</h3>
+    </article>
+
+    <article class="advanced lesson bg-danger">
+      <!-- https://www.w3schools.com/css/css3_animations.asp -->
+      <h1>ANIMATIONS:</h1>
+      <div class="animation-container">
+        <img
+          src="https://www.sumerge.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-22-at-1.12.19-PM.png.webp"
+          alt=""
+          class="animated-logo"
+        />
+      </div>
+
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements -->
+      <h1>PSEUDO CLASSES/ELEMENTS & TRANSITIONS:</h1>
+      <div class="row mx-5 justify-content-between">
+        <div class="boojoo is-identifier">
+          <h3>BOOJOO</h3>
+        </div>
+        <div class="boojoo">
+          <h3 class="has-identifier">BOOJOO</h3>
+        </div>
+        <div class="boojoo">
+          <h3>BOOJOO</h3>
+        </div>
+      </div>
+    </article>
+
+    <article class="chess lesson">
+      <div class="chess-board"></div>
+    </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- <article class="chess lesson">
+      <div class="chess-board row">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </article> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -59,7 +59,7 @@ and move child using absolute property.
 
 5)sticky: the element is positioned based on the user's scroll position.After
 element goes to scroll position it act as fixed and we give it using top,left,
-right,bottom.  (RELATIVE TO ITS PARENT)
+right,bottom. (RELATIVE TO ITS PARENT)
 */
 
 .positioning {
@@ -84,7 +84,30 @@ right,bottom.  (RELATIVE TO ITS PARENT)
   top: 0; */
 }
 
-/* <------- LAYOUT -------> */
+/* <------- FLEXBOX -------> 
+PARENT PROPERTIES 
+	display: flex; or inline-flex 
+	flex-direction: row | row-reverse | column | column-reverse;
+	flex-wrap: nowrap | wrap | wrap-reverse;
+	justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right;
+	align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end;
+	align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline; 
+  GAP 
+  gap: 10px;
+  gap: 10px 20px;  row-gap column gap 
+  row-gap: 10px;
+  column-gap: 20px;
+
+CHILDREN PROPERTIES
+    order: 5;  default is 0 
+    flex-grow: 4;  default 0 
+    flex-shrink: 3;  default 1 
+    flex-basis:  33.33% | auto;  default size auto 
+    SHORTHAND 
+    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+*/
+
 .flexbox,
 .grid {
   height: 100vh;
@@ -113,12 +136,12 @@ right,bottom.  (RELATIVE TO ITS PARENT)
 }
 
 .flex-wrapper {
-  display: flex;
   width: 100%;
   height: 90%;
   border: 5px solid green;
   /* QUESTION: WHY AM I USING BORDER-BOX HERE? */
   box-sizing: border-box;
+  /* display: flex; */
 }
 
 .flex-wrapper .box {
@@ -146,29 +169,250 @@ right,bottom.  (RELATIVE TO ITS PARENT)
 .flex-wrapper .box-5 {
 }
 
+/* <------- GRID ------->  */
+
 .grid-wrapper {
   width: 100%;
   height: 90%;
   border: 5px solid yellow;
   box-sizing: border-box;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto); */
 }
 
 .grid-wrapper .box {
-  height: 100px;
-  width: 200px;
+  /* height: 100px;
+  width: 200px; */
 }
 
 .grid-wrapper .box-1 {
+  /* grid-column: 1 / 3;
+  grid-row: 1; */
 }
 
 .grid-wrapper .box-2 {
+  /* grid-column: 2 / 4;
+  grid-row: 1 / 3; */
 }
 
 .grid-wrapper .box-3 {
+  /* grid-column: 1;
+  grid-row: 2 / 5; */
 }
 
 .grid-wrapper .box-4 {
+  /* grid-column: 3;
+  grid-row: 3; */
 }
 
 .grid-wrapper .box-5 {
+  /* grid-column: 2;
+  grid-row: 4; */
 }
+
+/* <------- BS5 ------->  */
+.bootstrap {
+  height: 100vh;
+  background-color: indianred;
+}
+
+/* WHAT ABOUT I DON'T WRITE THEM MY SELF? */
+.width-50 {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.marginx-3 {
+  margin-inline: 3rem;
+}
+
+.marginb-3 {
+  margin-bottom: 3rem;
+}
+
+.paddingx-1 {
+  padding-inline: 1rem;
+}
+
+/* <------- RESPONSIVE ------->  */
+.responsive {
+  height: 100vh;
+  background-color: cornflowerblue;
+}
+
+.responsive .image {
+  width: 550px;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule */
+/* @media only screen and (max-width: 600px) {
+  .image {
+    width: 300px;
+  }
+} */
+
+/* <------- RESPONSIVE BS5 GRID SYSTEM -------> */
+/* .row {
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+.col {
+  height: 50px;
+  border: 2px solid white;
+} */
+
+/* <------- ANIMATIONS -------> */
+.advanced {
+  height: 100vh;
+  background: linear-gradient(
+    315deg,
+    rgba(177, 223, 174, 1) 3%,
+    rgba(146, 199, 240, 1) 38%,
+    rgba(202, 235, 186, 1) 68%,
+    rgba(120, 174, 227, 1) 98%
+  );
+  animation: gradient 20s ease-in-out infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animation-container {
+  width: 50%;
+  height: 40%;
+  border: 2px solid white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.animated-logo {
+  width: 120px;
+  height: 50px;
+  bottom: 1%;
+  animation: shake-up 2s linear 0s infinite;
+}
+
+@keyframes shake-up {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateY(-185px);
+  }
+  35% {
+    transform: translateY(-185px) rotate(17deg);
+  }
+  55% {
+    transform: translateY(-185px) rotate(-16deg);
+  }
+  65% {
+    transform: translateY(-185px) rotate(15deg);
+  }
+  75% {
+    transform: translateY(-185px) rotate(-13deg);
+  }
+  85% {
+    transform: translateY(-185px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* <------- PSEUDO CLASSES/ELEMENTS TRANSITIONS -------> */
+.boojoo {
+  width: 320px;
+  height: 250px;
+  background-image: url(./assets/boojoo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+/* GIVE BACKDROP ONLY TO FIRST BOOJOO */
+/* .boojoo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 1;
+} */
+
+/* TRY HOVER/HAS/NOT/IS */
+
+.boojoo h3 {
+  color: #f2dfcf;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* <------- CHESS -------> */
+.chess {
+  height: 100vh;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chess-board {
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid black;
+}
+
+/* .chess-board .row {
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+.chess-board .row:nth-child(odd) .col:nth-child(even) {
+  background-color: white;
+}
+
+.chess-board .row:nth-child(odd) .col:nth-child(odd) {
+  background-color: black;
+}
+
+.chess-board .row:nth-child(even) .col:nth-child(even) {
+  background-color: black;
+}
+
+.chess-board .row:nth-child(even) .col:nth-child(odd) {
+  background-color: white;
+} */
