@@ -9,8 +9,8 @@
   background-color: indigo;
 
   /* FIRST STEP: THE BOX THAT CONTAINS THE ACTUAL CONTENT (INTERNAL)*/
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 175px;
 
   /* SECOND STEP: THE DISTANCE BETWEEN THE CONTENT AND THE BORDER (INTERNAL)*/
   padding: 20px 30px 10px 40px;
@@ -28,8 +28,8 @@
   background-color: red;
 
   /* FIRST STEP: THE BOX THAT CONTAINS THE ACTUAL CONTENT */
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
 
   /* SECOND STEP: THE DISTANCE BETWEEN THE CONTENT AND THE BORDER */
   padding: 20px 30px;
@@ -258,21 +258,21 @@ CHILDREN PROPERTIES
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule */
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .image {
     width: 300px;
   }
-} */
+}
 
 /* <------- RESPONSIVE BS5 GRID SYSTEM -------> */
-/* .row {
+.box-wrapper {
   border: 2px solid black;
   box-sizing: border-box;
 }
-.col {
+.box {
   height: 50px;
   border: 2px solid white;
-} */
+}
 
 /* <------- ANIMATIONS -------> */
 .advanced {
